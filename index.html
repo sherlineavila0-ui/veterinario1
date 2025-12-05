@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet-Paradise - Veterinaria Premium</title>
+    <link rel="stylesheet" href="inicio2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación interactiva -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-mini">
+                    <div class="perrito-mini"></div>
+                </div>
+                <span>Pet-Paradise</span>
+            </div>
+            
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <a href="#inicio" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="servicios.html" class="nav-link">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>Servicios</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="nosotros.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Nosotros</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="testimonio.html" class="nav-link">
+                        <i class="fas fa-comments"></i>
+                        <span>Testimonios</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="contacto.html" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contacto</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="citas.html" class="btn-cita">
+                    <i class="fas fa-calendar-check"></i>
+                    Agendar Cita
+                </a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#inicio" class="mobile-link">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="#servicios" class="mobile-link">
+                <i class="fas fa-stethoscope"></i>
+                Servicios
+            </a>
+            <a href="#nosotros" class="mobile-link">
+                <i class="fas fa-users"></i>
+                Nosotros
+            </a>
+            <a href="#testimonios" class="mobile-link">
+                <i class="fas fa-comments"></i>
+                Testimonios
+            </a>
+            <a href="#contacto" class="mobile-link">
+                <i class="fas fa-envelope"></i>
+                Contacto
+            </a>
+            <a href="#citas" class="mobile-link btn-mobile">
+                <i class="fas fa-calendar-check"></i>
+                Agendar Cita
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header con efecto parallax -->
+    <header class="header-parallax" id="inicio">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="perrito">
+                        <div class="ojos ojo-izq"></div>
+                        <div class="ojos ojo-der"></div>
+                        <div class="nariz"></div>
+                        <div class="boca"></div>
+                    </div>
+                </div>
+            </div>
+            <h1>Pet-Paradise</h1>
+            <p class="slogan">Donde tus mascotas encuentran el paraíso que merecen</p>
+            <div class="header-buttons">
+                <a href="#servicios" class="btn-primary">
+                    <i class="fas fa-paw"></i>
+                    Nuestros Servicios
+                </a>
+                <a href="#contacto" class="btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Contáctanos
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="arrow"></div>
+        </div>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section class="bienvenida">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bienvenido a Pet-Paradise</h2>
+                <p>El cuidado que tu mascota se merece</p>
+            </div>
+            <div class="bienvenida-content">
+                <div class="bienvenida-text">
+                    <h3>Tu compañero feliz es nuestra prioridad</h3>
+                    <p>En Pet-Paradise nos dedicamos a proporcionar la mejor atención veterinaria para tus compañeros peludos. Nuestro equipo de profesionales altamente cualificados está comprometido con el bienestar y la salud de tus mascotas.</p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Atención con amor</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>Profesionales certificados</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Abiertos 24/7</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Instalaciones seguras</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bienvenida-img">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Veterinario cuidando de un perro">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Todo lo que tu mascota necesita en un solo lugar</p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Consultas Veterinarias</h3>
+                    <p>Atención médica especializada con equipos de última generación para el diagnóstico y tratamiento de tus mascotas.</p>
+                    <a href="#" class="servicio-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Vacunación</h3>
+                    <p>Programa completo de vacunas para proteger a tu compañero de enfermedades comunes y mantenerlo saludable.</p>
+                    <a href="#" class="servicio-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Peluquería Canina</h3>
+                    <p>Servicios de baño, corte de pelo, cuidado de uñas y limpieza dental para mantener a tu mascota radiante.</p>
+                    <a href="#" class="servicio-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Nutrición Especializada</h3>
+                    <p>Asesoramiento en alimentación y dietas personalizadas según la edad, raza y condición de salud de tu mascota.</p>
+                    <a href="#" class="servicio-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Guardería</h3>
+                    <p>Espacio seguro y divertido donde tu mascota puede quedarse mientras tú no estás, con monitoreo constante.</p>
+                    <a href="#" class="servicio-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Urgencias 24/7</h3>
+                    <p>Atención veterinaria de emergencia las 24 horas del día, los 7 días de la semana para cuando más nos necesites.</p>
+                    <a href="#" class="servicio-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <p>Historias reales de mascotas felices</p>
+            </div>
+            <div class="testimonio-carrusel">
+                <div class="testimonio-slide active">
+                    <div class="testimonio-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonio-text">Llevo a mi perro Max desde que era cachorro y siempre recibe la mejor atención. El personal es increíblemente amable y profesional. ¡Recomiendo totalmente Pet-Paradise!</p>
+                        <div class="testimonio-cliente">
+                            <div class="cliente-avatar">
+                                <img src="imagen/Designer.png" alt="María González">
+                            </div>
+                            <div class="cliente-info">
+                                <h4>María González</h4>
+                                <p>Dueña de Max</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-slide">
+                    <div class="testimonio-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonio-text">El equipo de Pet-Paradise salvó la vida de mi gata Luna cuando tuvo una emergencia. Estoy eternamente agradecido por su profesionalismo y dedicación.</p>
+                        <div class="testimonio-cliente">
+                            <div class="cliente-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Carlos Rodríguez">
+                            </div>
+                            <div class="cliente-info">
+                                <h4>Carlos Rodríguez</h4>
+                                <p>Dueño de Luna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-slide">
+                    <div class="testimonio-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonio-text">Servicio excepcional. Mi conejo Pelusín recibió un tratamiento excelente cuando estuvo enfermo. Las instalaciones son impecables y el trato es maravilloso.</p>
+                        <div class="testimonio-cliente">
+                            <div class="cliente-avatar">
+                                <img src="imagen/Designer.png" alt="Ana Martínez">
+                            </div>
+                            <div class="cliente-info">
+                                <h4>Ana Martínez</h4>
+                                <p>Dueña de Pelusín</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-controls">
+                    <button class="carrusel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carrusel-dots">
+                        <span class="carrusel-dot active" data-slide="0"></span>
+                        <span class="carrusel-dot" data-slide="1"></span>
+                        <span class="carrusel-dot" data-slide="2"></span>
+                    </div>
+                    <button class="carrusel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-mini">
+                        <div class="perrito-mini"></div>
+                    </div>
+                    <span>Pet-Paradise</span>
+                </div>
+                <p>Donde tus mascotas encuentran el paraíso que merecen. Cuidamos de ellos como si fueran nuestros.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Mascotas Felices 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +507 6686-2791</p>
+                    <p><i class="fas fa-envelope"></i> info@petparadise.com</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <div class="schedule-info">
+                    <p><span>Lunes - Viernes:</span> 8:00 - 20:00</p>
+                    <p><span>Sábados:</span> 9:00 - 18:00</p>
+                    <p><span>Domingos:</span> 10:00 - 14:00</p>
+                    <p><span>Urgencias:</span> 24/7</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir consejos sobre el cuidado de tu mascota y promociones especiales.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn-subscribe">
+                        <i class="fas fa-paper-plane"></i>
+                        Suscribirse
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Pet-Paradise. Todos los derechos reservados. | Diseñado con <i class="fas fa-heart"></i> para mascotas felices</p>
+        </div>
+    </footer>
+
+    <!-- Logo flotante para preguntas -->
+    <div class="chat-bot" id="chatBot">
+        <div class="chat-icon">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+        <div class="chat-tooltip">¿Necesitas ayuda?</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

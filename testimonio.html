@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonios - Veterinaria</title>
+<link rel="stylesheet" href="testimonio.css">
+</head>
+<body>
+<header>
+    <h1>Testimonios</h1>
+</header>
+
+<section class="testimonios-container">
+
+    <div class="testimonio">
+        <h3>María López – Gato “Michi”</h3>
+        <div class="stars">★★★★★</div>
+        <p>Excelente servicio, muy profesionales y atentos con mi mascota.</p>
+    </div>
+
+    <div class="testimonio">
+        <h3>Juan Pérez – Perro “Rocco”</h3>
+        <div class="stars">★★★★☆</div>
+        <p>Muy buena atención, Rocco salió feliz y relajado.</p>
+    </div>
+
+    <div class="testimonio">
+        <h3>Ana Castillo – Conejo “Copito”</h3>
+        <div class="stars">★★★★★</div>
+        <p>Los recomiendo, cuidaron a Copito como si fuera suyo.</p>
+    </div>
+
+</section>
+
+<section class="form-section">
+    <h2>Deja tu opinión</h2>
+    <form id="opinionForm">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <textarea id="opinion" placeholder="Escribe tu testimonio" required></textarea>
+        <select id="rating" required>
+            <option value="">Calificación</option>
+            <option value="★★★★★">★★★★★</option>
+            <option value="★★★★☆">★★★★☆</option>
+            <option value="★★★☆☆">★★★☆☆</option>
+            <option value="★★☆☆☆">★★☆☆☆</option>
+            <option value="★☆☆☆☆">★☆☆☆☆</option>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<script src="testimonio.js"></script>
+</body>
+</html>

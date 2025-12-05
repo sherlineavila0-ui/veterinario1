@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Pet-Paradise</title>
+    <link rel="stylesheet" href="citas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-mini">
+                    <div class="perrito-mini"></div>
+                </div>
+                <span>Pet-Paradise</span>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="btn-volver">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="cita-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Agendar Cita Médica</h1>
+                <p>Programa una consulta para tu mascota con nuestros especialistas</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario de Cita -->
+    <section class="formulario-cita">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2><i class="fas fa-calendar-plus"></i> Información de la Cita</h2>
+                    <p>Completa todos los campos para agendar tu cita</p>
+                </div>
+
+                <form id="formCita" class="cita-form">
+                    <!-- Información de la Mascota -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-paw"></i> Información de la Mascota</h3>
+                        
+                        <div class="form-group">
+                            <label for="nombreMascota">Nombre de la Mascota *</label>
+                            <input type="text" id="nombreMascota" name="nombreMascota" required>
+                            <div class="error-message" id="errorMascota"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="especie">Especie *</label>
+                                <select id="especie" name="especie" required>
+                                    <option value="">Selecciona una especie</option>
+                                    <option value="perro">Perro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="ave">Ave</option>
+                                    <option value="roedor">Roedor</option>
+                                    <option value="reptil">Reptil</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="raza">Raza</label>
+                                <input type="text" id="raza" name="raza" placeholder="Ej: Labrador, Siames, etc.">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edad">Edad</label>
+                                <div class="edad-input">
+                                    <input type="number" id="edad" name="edad" min="0" max="50" placeholder="0">
+                                    <select id="unidadEdad" name="unidadEdad">
+                                        <option value="meses">Meses</option>
+                                        <option value="años">Años</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="peso">Peso (kg)</label>
+                                <input type="number" id="peso" name="peso" min="0" step="0.1" placeholder="0.0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Información del Dueño -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Información del Dueño</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombreDueno">Nombre Completo *</label>
+                                <input type="text" id="nombreDueno" name="nombreDueno" required>
+                                <div class="error-message" id="errorDueno"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                                <div class="error-message" id="errorTelefono"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="errorEmail"></div>
+                        </div>
+                    </div>
+
+                    <!-- Síntomas y Tipo de Cita -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-stethoscope"></i> Información Médica</h3>
+                        
+                        <div class="form-group">
+                            <label for="tipoCita">Tipo de Consulta *</label>
+                            <select id="tipoCita" name="tipoCita" required>
+                                <option value="">Selecciona el tipo de consulta</option>
+                                <option value="consulta-general">Consulta General</option>
+                                <option value="vacunacion">Vacunación</option>
+                                <option value="urgencia">Urgencia</option>
+                                <option value="cirugia">Cirugía</option>
+                                <option value="peluqueria">Peluquería</option>
+                                <option value="control">Control Rutinario</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sintomas">Síntomas o Motivo de la Consulta *</label>
+                            <textarea id="sintomas" name="sintomas" rows="4" placeholder="Describe los síntomas, comportamientos inusuales o el motivo de la consulta..." required></textarea>
+                            <div class="error-message" id="errorSintomas"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="observaciones">Observaciones Adicionales</label>
+                            <textarea id="observaciones" name="observaciones" rows="3" placeholder="Cualquier información adicional que consideres importante..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Fecha y Hora -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-clock"></i> Fecha y Hora Preferida</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fechaCita">Fecha Preferida *</label>
+                                <input type="date" id="fechaCita" name="fechaCita" required min="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="horaCita">Hora Preferida *</label>
+                                <select id="horaCita" name="horaCita" required>
+                                    <option value="">Selecciona una hora</option>
+                                    <!-- Las opciones se llenarán con JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="urgent-notice">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Para emergencias las 24 horas, llama al <strong>(123) 456-7890</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Términos y Condiciones -->
+                    <div class="form-section">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">
+                                Acepto los <a href="#" class="link">términos y condiciones</a> y autorizo el tratamiento de mis datos personales *
+                            </label>
+                        </div>
+                        <div class="error-message" id="errorTerminos"></div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="btnLimpiar">
+                            <i class="fas fa-broom"></i>
+                            Limpiar Formulario
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="btnEnviar">
+                            <i class="fas fa-calendar-check"></i>
+                            Agendar Cita
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div id="modalConfirmacion" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-check-circle"></i> ¡Cita Agendada Exitosamente!</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="confirmacion-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Gracias por confiar en Pet-Paradise</h3>
+                <p>Hemos recibido tu solicitud de cita y nos pondremos en contacto contigo pronto para confirmarla.</p>
+                
+                <div class="resumen-cita">
+                    <h4>Resumen de tu cita:</h4>
+                    <div class="resumen-item">
+                        <strong>Mascota:</strong> <span id="resumenMascota"></span>
+                    </div>
+                    <div class="resumen-item">
+                        <strong>Dueño:</strong> <span id="resumenDueno"></span>
+                    </div>
+                    <div class="resumen-item">
+                        <strong>Fecha:</strong> <span id="resumenFecha"></span>
+                    </div>
+                    <div class="resumen-item">
+                        <strong>Hora:</strong> <span id="resumenHora"></span>
+                    </div>
+                    <div class="resumen-item">
+                        <strong>Motivo:</strong> <span id="resumenMotivo"></span>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="btnNuevaCita">
+                        <i class="fas fa-plus"></i>
+                        Agendar Otra Cita
+                    </button>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i>
+                        Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="cita-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-mini">
+                            <div class="perrito-mini"></div>
+                        </div>
+                        <span>Pet-Paradise</span>
+                    </div>
+                    <p>Tu mascota merece la mejor atención veterinaria</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto de Emergencia</h4>
+                    <p><i class="fas fa-phone"></i> +507 6686-2791</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Mascotas Felices 123, Ciudad</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Pet-Paradise. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="citas.js"></script>
+</body>
+</html>
